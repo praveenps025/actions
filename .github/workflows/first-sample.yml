@@ -8,6 +8,9 @@ jobs:
     first_job:
         runs-on: ubuntu-latest      # where this job to run
         steps:
+        - name: Checkout Repo
+          uses: actions/checkout@v4
+          
         - name: Welcome Message
           run: echo "My first Github Workflow"      # what to run in the machine
         
