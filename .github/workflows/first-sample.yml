@@ -1,6 +1,6 @@
 name: First Workflow
 
-on: []                # whenever anything pushed to this repo this workflow will get executed
+on: push                # whenever anything pushed to this repo this workflow will get executed
 #on: [push, fork]       # we can also mention multiple events
 
 jobs:
