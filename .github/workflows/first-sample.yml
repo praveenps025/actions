@@ -1,0 +1,18 @@
+name: First Workflow
+
+
+on: push                # whenever anything pushed to this repo this workflow will get executed
+#on: [push, fork]       # we can also mention multiple events
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest      # where this job to run
+        steps:
+        - name: Welcome Message
+          run: echo "My first Github Workflow"      # what to run in the machine
+        
+        - name: List files
+          run: ls
+
+        - name: Read file
+          run: cat README.md
