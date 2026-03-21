@@ -1,0 +1,21 @@
+name: sample js
+
+on:
+    workflow_dispatch
+
+jobs:
+    pull_app:
+        runs-on: ubuntu-latest
+        steps:
+            - name: pull repo and build
+              run: |
+                git clone git@gitlab.com:sidd-harth/solar-system.git
+                ls
+                sudo apt install nodejs
+                sudo apt install npm
+                npm install
+                npm test
+                npm run coverage
+                npm start
+                curl http://localhost:3000/
+
