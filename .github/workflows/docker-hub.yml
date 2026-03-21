@@ -9,7 +9,7 @@ jobs:
         steps:
             - name: pull repo and build
               run: |
-                git clone git@gitlab.com:sidd-harth/solar-system.git
+                git clone https://gitlab.com/sidd-harth/solar-system.git
                 ls
                 sudo apt install nodejs
                 sudo apt install npm
